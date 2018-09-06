@@ -1,6 +1,5 @@
 #include <doctest/doctest.h>
 
-#define SSE_INITIALIZER_LIST_CONSTRUCTION
 #include <ArtifactSSE/SSE128Vector.h>
 
 TEST_SUITE("SSE128Vector<int> test construction")
@@ -86,15 +85,16 @@ TEST_SUITE("SSE128Vector int test operations")
 		}
 	}
 
-// 	TEST_CASE("Test division")
-// 	{
-// 		SSE128Vector<int> vector({ 2, 2, 2, 2 });
-// 		SSE128Vector<int> result = vector / vector;
-// 		int result_data[4];
-// 		result.CopyTo(result_data);
-// 		REQUIRE(result_data[0] == 1);
-// 		REQUIRE(result_data[1] == 1);
-// 		REQUIRE(result_data[2] == 1);
-// 		REQUIRE(result_data[3] == 1);
-// 	}
+	TEST_CASE("Test division")
+	{
+		SSE128Vector<int> vector({ 3, 3, 3, 3 });
+		SSE128Vector<int> vector2({ 2, 2, 2, 2 });
+		SSE128Vector<int> result = vector / vector;
+		int result_data[4];
+		result.CopyTo(result_data);
+		REQUIRE(result_data[0] == 1);
+		REQUIRE(result_data[1] == 1);
+		REQUIRE(result_data[2] == 1);
+		REQUIRE(result_data[3] == 1);
+	}
 }

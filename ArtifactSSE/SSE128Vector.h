@@ -1,7 +1,5 @@
 #pragma once
-#ifdef SSE_INITIALIZER_LIST_CONSTRUCTION
 #include <initializer_list>
-#endif /* SSE_INITIALIZER_LIST_CONSTRUCTION */
 
 #include "ISIMDVector.h"
 #include "ConfigurationMacros.h"
@@ -67,6 +65,9 @@ private:
 	__m128i m_Data;
 
 public:
+	/// <summary>Initializes a new instance of the <see cref="SSE128Vector"/> class.</summary>
+	SSE128Vector();
+
 	/// <summary>Initializes a new instance of the <see cref="SSE128Vector"/> class.</summary>
 	/// <param name="a_Data">The data to initialise the vector with, assuming it contains at least 4 integers. Preferably 16-byte aligned</param>
 	SSE128Vector(const int* a_Data);
