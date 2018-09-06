@@ -1,5 +1,7 @@
 #include "SSE128Vector.h"
 
+#include <intrin.h>
+
 #ifdef SSE_INITIALIZER_LIST_CONSTRUCTION
 #include <array>
 #include <initializer_list>

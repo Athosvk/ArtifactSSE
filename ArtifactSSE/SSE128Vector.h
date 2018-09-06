@@ -6,8 +6,13 @@
 #include "ISIMDVector.h"
 #include "ConfigurationMacros.h"
 
+#if defined(_MSVC)
+#include <xmmintrin.h>
+#include <emmintrin.h>
+#else
 union __m128;
 union __m128i;
+#endif
 
 /// <summary>
 /// Represents a 128 bit SSE (Streaming SIMD Extensions) vector
@@ -18,15 +23,6 @@ class SSE128Vector
 	SSE128Vector()
 	{
 		static_assert("No SIMD available for given type");
-	}
-
-private:	
-	/// <summary>Constructs a SSE vector from the a_Elements.</summary>
-	/// <param name="a_Elements">The elements to construct the initializer list from.</param>
-	/// <returns>The constructed 128 bit SSE vector</returns>
-	static SSE128Vector<TElement> ConstructFromInitializerList(const std::initializer_list<TElement>& a_Elements)
-	{
-
 	}
 };
 

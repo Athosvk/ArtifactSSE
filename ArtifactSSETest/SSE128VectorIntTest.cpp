@@ -1,5 +1,3 @@
-#include <array>
-#include <initializer_list>
 #include <doctest/doctest.h>
 
 #define SSE_INITIALIZER_LIST_CONSTRUCTION
