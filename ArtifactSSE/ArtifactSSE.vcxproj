@@ -23,13 +23,17 @@
     <ClInclude Include="ConfigurationMacros.h" />
     <ClInclude Include="ISIMDVector.h" />
     <ClInclude Include="SSE128Vector.h" />
+    <ClInclude Include="SSE128VectorFloat.h" />
+    <ClInclude Include="SSE128VectorInt.h" />
+    <ClInclude Include="SSE128VectorInt.inl" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SSE128Vector.inl" />
+    <None Include="SSE128VectorFloat.inl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SSE128Vector.cpp" />
+    <ClCompile Include="SSE128VectorFloat.cpp" />
+    <ClCompile Include="SSE128VectorInt.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}</ProjectGuid>

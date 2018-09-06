@@ -1,9 +1,6 @@
-#include <array>
 #include <doctest/doctest.h>
 
-#define SSE_INITIALIZER_LIST_CONSTRUCTION
-#define SSE_EXPLICIT_CONSTRUCTOR
-#include <ArtifactSSE/SSE128Vector.h>
+#include <ArtifactSSE/SSE128VectorFloat.h>
 
 TEST_SUITE("SSE128Vector float test construction")
 {

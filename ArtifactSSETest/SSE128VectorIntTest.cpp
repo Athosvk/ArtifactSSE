@@ -1,6 +1,6 @@
 #include <doctest/doctest.h>
 
-#include <ArtifactSSE/SSE128Vector.h>
+#include <ArtifactSSE/SSE128VectorInt.h>
 
 TEST_SUITE("SSE128Vector<int> test construction")
 {

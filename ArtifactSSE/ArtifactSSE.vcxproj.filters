@@ -30,14 +30,26 @@
     <ClInclude Include="ArrayUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SSE128VectorInt.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SSE128VectorInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SSE128VectorFloat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SSE128Vector.inl">
+    <None Include="SSE128VectorFloat.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SSE128Vector.cpp">
+    <ClCompile Include="SSE128VectorInt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSE128VectorFloat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
