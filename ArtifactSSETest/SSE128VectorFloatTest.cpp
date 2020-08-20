@@ -60,15 +60,16 @@ TEST_SUITE("SSE128Vector float test operations")
 		}
 	}
 
-	TEST_CASE("Test subraction")
+	TEST_CASE("Test subtraction")
 	{
 		SSE128Vector<float> vector({ 1.0f, 1.0f, 1.0f, 1.0f });
-		SSE128Vector<float> result = vector - vector;
+		SSE128Vector<float> vector2({ 2.0f, 2.0f, 2.0f, 2.0f });
+		SSE128Vector<float> result = vector - vector2;
 		float result_data[4];
 		result.CopyTo(result_data);
 		for(int i = 0; i < 4; ++i)
 		{
-			REQUIRE(result_data[i] == doctest::Approx(0.0f));
+			REQUIRE(result_data[i] == doctest::Approx(-1.0f));
 		}
 	}
 
@@ -86,13 +87,14 @@ TEST_SUITE("SSE128Vector float test operations")
 
 	TEST_CASE("Test division")
 	{
-		SSE128Vector<float> vector({ 2.0f, 2.0f, 2.0f, 2.0f });
-		SSE128Vector<float> result = vector / vector;
+		SSE128Vector<float> vector({ 3.0f, 3.0f, 3.0f, 3.0f });
+		SSE128Vector<float> vector2({ 2.0f, 2.0f, 2.0f, 2.0f });
+		SSE128Vector<float> result = vector / vector2;
 		float result_data[4];
 		result.CopyTo(result_data);
 		for (int i = 0; i < 4; ++i)
 		{
-			REQUIRE(result_data[i] == doctest::Approx(1.0f));
+			REQUIRE(result_data[i] == doctest::Approx(1.5f));
 		}
 	}
 }

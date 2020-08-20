@@ -32,12 +32,12 @@ inline void SSE128Vector<float>::CopyTo(float* a_Target)
 
 inline SSE128Vector<float> SSE128Vector<float>::operator+(const SSE128Vector<float>& a_Other)
 {
-	return SSE128Vector<float>(_mm_add_ps(a_Other.m_Data, m_Data));
+	return SSE128Vector<float>(_mm_add_ps(m_Data, a_Other.m_Data));
 }
 
 inline SSE128Vector<float> SSE128Vector<float>::operator-(const SSE128Vector<float>& a_Other)
 {
-	return SSE128Vector<float>(_mm_sub_ps(a_Other.m_Data, m_Data));
+	return SSE128Vector<float>(_mm_sub_ps(m_Data, a_Other.m_Data));
 }
 
 inline SSE128Vector<float> SSE128Vector<float>::operator*(const SSE128Vector<float>& a_Other)
@@ -47,5 +47,5 @@ inline SSE128Vector<float> SSE128Vector<float>::operator*(const SSE128Vector<flo
 
 inline SSE128Vector<float> SSE128Vector<float>::operator/(const SSE128Vector<float>& a_Other)
 {
-	return SSE128Vector<float>(_mm_div_ps(a_Other.m_Data, m_Data));
+	return SSE128Vector<float>(_mm_div_ps(m_Data, a_Other.m_Data));
 }

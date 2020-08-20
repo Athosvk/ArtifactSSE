@@ -4,17 +4,20 @@
 namespace Artifact
 {
 	/// <summary>
-	/// Represents a vector that can, possibly, operate on multiple data elements in a single instruction
+	/// Represents a vector that tries to operate on multiple data elements in a single instruction, depending on the hardware capabilities
 	/// </summary>
-	template<template<typename> typename taSIMD_VECTOR_TYPE, typename taELEMENT>
-	class SIMDVector
+	template<typename taELEMENT, template<typename> typename taSIMD_VECTOR_TYPE>
+	class Vector
 	{
 		using VectorType = taSIMD_VECTOR_TYPE<taELEMENT>;
 
 	public:
 		size_t GetSize() const
 		{
-			return static_cast<VectorType*>(this)->GetSize();
+			return m_Size;
 		}
+
+	private:
+		size_t m_Size = 0;
 	};
 }

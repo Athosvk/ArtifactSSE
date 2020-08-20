@@ -61,9 +61,10 @@ TEST_SUITE("SSE128Vector int test operations")
 		}
 	}
 
-	TEST_CASE("Test subraction")
+	TEST_CASE("Test subtraction")
 	{
 		SSE128Vector<int> vector({ 1, 1, 1, 1 });
+		SSE128Vector<int> vector2({ 2, 2, 2, 2 });
 		SSE128Vector<int> result = vector - vector;
 		int result_data[4];
 		result.CopyTo(result_data);
@@ -89,12 +90,12 @@ TEST_SUITE("SSE128Vector int test operations")
 	{
 		SSE128Vector<int> vector({ 3, 3, 3, 3 });
 		SSE128Vector<int> vector2({ 2, 2, 2, 2 });
-		SSE128Vector<int> result = vector / vector;
+		SSE128Vector<int> result = vector / vector2;
 		int result_data[4];
 		result.CopyTo(result_data);
-		REQUIRE(result_data[0] == 1);
-		REQUIRE(result_data[1] == 1);
-		REQUIRE(result_data[2] == 1);
-		REQUIRE(result_data[3] == 1);
+		for (int i = 0; i < 4; ++i)
+		{
+			REQUIRE(result_data[i] == (int)1.5f);
+		}
 	}
 }
