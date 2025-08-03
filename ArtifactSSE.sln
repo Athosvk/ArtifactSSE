@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArtifactSSE", "ArtifactSSE\ArtifactSSE.vcxproj", "{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArtifactSSETest", "ArtifactSSETest\ArtifactSSETest.vcxproj", "{923B56E5-7471-4114-B1DB-51D45997C893}"
+	ProjectSection(ProjectDependencies) = postProject
+		{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D} = {26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +26,14 @@ Global
 		{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}.Release|x64.Build.0 = Release|x64
 		{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}.Release|x86.ActiveCfg = Release|Win32
 		{26A1A2FA-9844-46E8-B4C2-1A73067ECE0D}.Release|x86.Build.0 = Release|Win32
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Debug|x64.ActiveCfg = Debug|x64
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Debug|x64.Build.0 = Debug|x64
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Debug|x86.ActiveCfg = Debug|Win32
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Debug|x86.Build.0 = Debug|Win32
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Release|x64.ActiveCfg = Release|x64
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Release|x64.Build.0 = Release|x64
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Release|x86.ActiveCfg = Release|Win32
+		{923B56E5-7471-4114-B1DB-51D45997C893}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
